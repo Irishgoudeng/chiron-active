@@ -10,6 +10,8 @@ import BestSellers from "./components/BestSellers";
 import Categories from "./components/Categories";
 import StayInTheLoop from "./components/StayInTheLoop";
 
+import Footer from "./components/Footer";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -49,6 +51,8 @@ export default function RootLayout({
         <div>
           <StayInTheLoop />
         </div>
+
+        <Footer />
       </body>
     </html>
   );
