@@ -1,10 +1,11 @@
 import React from "react";
-
 import Image from "next/image";
 
 const HeroSection = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
+      {" "}
+      {/* Added 'relative' class */}
       <Image
         src="/assets/hero-banner.png"
         alt="Hero Background"

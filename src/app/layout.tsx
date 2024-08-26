@@ -5,6 +5,10 @@ import "./globals.css";
 import Navbar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
 import FeaturedReleases from "./components/FeaturedReleases";
+import SecondHeroSection from "./components/SecondHeroSection";
+import BestSellers from "./components/BestSellers";
+import Categories from "./components/Categories";
+import StayInTheLoop from "./components/StayInTheLoop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,8 +30,24 @@ export default function RootLayout({
         </div>
         <HeroSection />
 
-        <div className="h-screen w-full">
+        <div className="py-12">
           <FeaturedReleases />
+        </div>
+
+        <div className="py-12">
+          <SecondHeroSection />
+        </div>
+
+        <div className="py-12">
+          <BestSellers />
+        </div>
+
+        <div className="py-12">
+          <Categories />
+        </div>
+
+        <div>
+          <StayInTheLoop />
         </div>
       </body>
     </html>

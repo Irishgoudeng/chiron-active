@@ -222,15 +222,28 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div
+          className={`md:hidden bg-white shadow-lg mx-4 my-2 rounded-lg overflow-hidden transform transition duration-300 ease-in-out ${
+            isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
+        >
           <div className="px-6 py-4">
-            <a href="#" className="block py-2">
+            <a
+              href="#"
+              className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded transition duration-150 ease-in-out"
+            >
               COLLECTIONS
             </a>
-            <a href="#" className="block py-2">
+            <a
+              href="#"
+              className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded transition duration-150 ease-in-out"
+            >
               SHOP BY
             </a>
-            <a href="#" className="block py-2">
+            <a
+              href="#"
+              className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded transition duration-150 ease-in-out"
+            >
               BRAND
             </a>
           </div>
