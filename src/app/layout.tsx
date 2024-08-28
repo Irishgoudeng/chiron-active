@@ -2,15 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Navbar from "./components/NavBar";
-import HeroSection from "./components/HeroSection";
-import FeaturedReleases from "./components/FeaturedReleases";
-import SecondHeroSection from "./components/SecondHeroSection";
-import BestSellers from "./components/BestSellers";
-import Categories from "./components/Categories";
-import StayInTheLoop from "./components/StayInTheLoop";
-
-import Footer from "./components/Footer";
+import Navbar from "./components/common/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,32 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="">
-          <Navbar />
-        </div>
-        <HeroSection />
-
-        <div className="py-12">
-          <FeaturedReleases />
-        </div>
-
-        <div className="py-12">
-          <SecondHeroSection />
-        </div>
-
-        <div className="py-12">
-          <BestSellers />
-        </div>
-
-        <div className="py-12">
-          <Categories />
-        </div>
-
-        <div>
-          <StayInTheLoop />
-        </div>
-
-        <Footer />
+        {children}
+        <Navbar />
       </body>
     </html>
   );

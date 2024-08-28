@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,42 +69,42 @@ export default function Navbar() {
         {/* Left Side: Collections, Shop By, Brand */}
         <div className="hidden md:flex space-x-6">
           <div className="group relative">
-            <a href="#" className="hover:text-gray-600">
-              Women
-            </a>
+            <Link href="/about" className="hover:text-gray-600">
+              About
+            </Link>
             <div className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg hidden group-hover:block">
-              <a href="#" className="block px-4 py-2">
+              <Link href="/collection1" className="block px-4 py-2">
                 Collection 1
-              </a>
-              <a href="#" className="block px-4 py-2">
+              </Link>
+              <Link href="/collection2" className="block px-4 py-2">
                 Collection 2
-              </a>
+              </Link>
             </div>
           </div>
           <div className="group relative">
-            <a href="#" className="hover:text-gray-600">
+            <Link href="/men" className="hover:text-gray-600">
               Men
-            </a>
+            </Link>
             <div className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg hidden group-hover:block">
-              <a href="#" className="block px-4 py-2">
+              <Link href="/category1" className="block px-4 py-2">
                 Category 1
-              </a>
-              <a href="#" className="block px-4 py-2">
+              </Link>
+              <Link href="/category2" className="block px-4 py-2">
                 Category 2
-              </a>
+              </Link>
             </div>
           </div>
           <div className="group relative">
-            <a href="#" className="hover:text-gray-600">
+            <Link href="/categories" className="hover:text-gray-600">
               Categories
-            </a>
+            </Link>
             <div className="absolute left-0 mt-2 w-48 bg-white text-black shadow-lg hidden group-hover:block">
-              <a href="#" className="block px-4 py-2">
+              <Link href="/brand1" className="block px-4 py-2">
                 Brand 1
-              </a>
-              <a href="#" className="block px-4 py-2">
+              </Link>
+              <Link href="/brand2" className="block px-4 py-2">
                 Brand 2
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -129,7 +130,6 @@ export default function Navbar() {
         </div>
 
         {/* Logo */}
-
         <div className="w-32 h-16">
           <Image
             src="/assets/chiron-logo.png"
@@ -178,7 +178,7 @@ export default function Navbar() {
               </div>
             )}
           </div>
-          <a href="#" className="hover:text-gray-600">
+          <Link href="/notifications" className="hover:text-gray-600">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -198,8 +198,8 @@ export default function Navbar() {
                 strokeLinejoin="round"
               />
             </svg>
-          </a>
-          <a href="#" className="relative hover:text-gray-600">
+          </Link>
+          <Link href="/cart" className="relative hover:text-gray-600">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -216,7 +216,7 @@ export default function Navbar() {
             <span className="absolute top-0 right-0 w-4 h-4 bg-black text-white text-xs rounded-full flex items-center justify-center">
               1
             </span>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -228,24 +228,24 @@ export default function Navbar() {
           }`}
         >
           <div className="px-6 py-4">
-            <a
-              href="#"
+            <Link
+              href="/collections"
               className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded transition duration-150 ease-in-out"
             >
               COLLECTIONS
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/shop-by"
               className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded transition duration-150 ease-in-out"
             >
               SHOP BY
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/brand"
               className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded transition duration-150 ease-in-out"
             >
               BRAND
-            </a>
+            </Link>
           </div>
         </div>
       )}
