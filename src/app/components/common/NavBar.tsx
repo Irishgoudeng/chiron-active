@@ -178,7 +178,7 @@ export default function Navbar() {
               </div>
             )}
           </div>
-          <Link href="/notifications" className="hover:text-gray-600">
+          <Link href="/login" className="hover:text-gray-600">
             <svg
               className="w-6 h-6"
               fill="none"
